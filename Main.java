@@ -1,32 +1,11 @@
-package hashmap_assignment;
-
-import java.util.HashMap;
+package polymorphism_assignment;
 
 public class Main {
-    public static void main(String[] args) {
-        HashMap<String, String> map = new HashMap<>();
-        map.put("milk","25/-");
-        map.put("butter", "35/-");
-        map.put("egg","40/-");
-        map.put("rice", "150/-");
-    
-        for (String key : map.keySet()) {
-            String value = map.get(key);
-            System.out.println(key + ": " + value);
-        }
+	  public static void main(String[] args) {
+	    Measure Meter = new Meter(10);
+	    Measure Feet = new Feet(10);
 
-
-        String rate = map.get("butter");
-        System.out.println(rate); 
-
-        boolean exists = map.containsKey("egg");
-        System.out.println(exists); 
-
-        map.remove("rice");
-
-        for (String key : map.keySet()) {
-            String value = map.get(key);
-            System.out.println(key + ": " + value);
-        }
-    }
-}
+	    System.out.println("converting cm into m (10): " + Meter.calculateLength());
+	    System.out.println("converting cm into feet (10): " + Feet.calculateLength());
+	  }
+	}
